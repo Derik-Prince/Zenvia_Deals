@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenvia Deals | Verified Tech Discounts & Exclusive Offers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .glass { background: rgba(26, 32, 44, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .badge-glow { box-shadow: 0 0 15px rgba(245, 158, 11, 0.25); }
+  </style>
+</head>
+<body class="bg-[#0b0f19] text-gray-100 min-h-screen flex flex-col antialiased selection:bg-amber-500 selection:text-black">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-500 text-black text-xs font-bold py-2 text-center tracking-wide shadow-md">
+    ⚡ ZENVIA FLASH DEALS: Hand-curated discounts updated automatically directly from top brand stores!
+  </div>
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 glass border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl font-black bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-200 bg-clip-text text-transparent tracking-tight">Zenvia Deals.</span>
+        <span class="text-[10px] font-semibold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/30">Verified</span>
+      </div>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live Deals Auto-Synced</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="py-12 px-4 max-w-5xl mx-auto text-center">
+    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+      Zenvia Handpicked Deals & <span class="bg-gradient-to-r from-amber-400 to-amber-200 bg-clip-text text-transparent">Steal Prices</span>
+    </h1>
+    <p class="mt-4 text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
+      Direct verified discount links from Amazon, Flipkart & Brand stores. Click to grab before stock runs out.
+    </p>
+
+    <!-- Search & Filter Controls -->
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+      <input type="text" id="searchInput" placeholder="Search earbuds, watches, gadgets..." 
+             class="flex-1 bg-gray-900/80 border border-gray-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400 transition">
+      <select id="categoryFilter" class="bg-gray-900/80 border border-gray-700 rounded-xl px-4 py-3 text-sm text-gray-300 focus:outline-none focus:border-amber-400 transition">
+        <option value="all">All Categories</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Main Product Grid -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 flex-1 w-full">
+    <div id="loader" class="text-center py-20">
+      <div class="inline-block w-8 h-8 border-4 border-amber-500 border-t-transparent rounded-full animate-spin"></div>
+      <p class="text-sm text-gray-400 mt-3 font-medium">Syncing deals from Google Sheet...</p>
+    </div>
+
+    <div id="dealsGrid" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <div id="noDeals" class="hidden text-center py-16 text-gray-500">No active deals found matching your query.</div>
+  </main>
+
+  <!-- Professional Footer & Legal Affiliate Disclaimers -->
+  <footer class="glass border-t border-gray-800 text-gray-400 text-xs py-10 px-4 mt-auto">
+    <div class="max-w-7xl mx-auto space-y-6 text-center sm:text-left sm:flex sm:justify-between sm:items-start sm:space-y-0">
+      <div class="max-w-md">
+        <p class="text-base font-bold text-white mb-2">Zenvia Deals.</p>
+        <p class="text-gray-400 leading-relaxed text-xs">
+          Curating the internet's best electronics, accessories, and gadget deals. Never pay full retail price again.
+        </p>
+      </div>
+
+      <!-- Legal Disclosure -->
+      <div class="max-w-xl text-gray-400 leading-relaxed space-y-2">
+        <p class="font-semibold text-gray-300 uppercase tracking-wider text-[11px]">Affiliate Disclaimer & Disclosure</p>
+        <p>
+          This website contains affiliate links (including ExtraPe, Amazon Associates, and partner brand networks). When you click on any product link and make a purchase, we may earn a small qualifying commission at absolutely <strong class="text-gray-200">no extra cost to you</strong>. All prices, coupons, and stock availability are subject to change by respective e-commerce merchants.
+        </p>
+        <p class="text-[11px] text-gray-500 pt-2 border-t border-gray-800">
+          © 2026 Zenvia Deals. All rights reserved. Trademarks and product images belong to their respective brand owners.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Google Sheet Public Export Link
+    const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1qbIqSU4koTS6QanI8BuDMaqho-w4oEHPXm-gynPrqyU/export?format=csv";
+
+    let allDeals = [];
+
+    function parseCSV(text) {
+      const lines = text.split('\n').filter(row => row.trim().length > 0);
+      if (lines.length < 2) return [];
+      
+      const rows = [];
+      for (let i = 1; i < lines.length; i++) {
+        const regex = /(".*?"|[^",\r]+)(?=\s*,|\s*$)/g;
+        const matches = lines[i].match(regex) || [];
+        const cleanRow = matches.map(m => m.replace(/^"|"$/g, '').trim());
+        if (cleanRow.length >= 7) {
+          rows.push({
+            title: cleanRow[0],
+            category: cleanRow[1] || 'General',
+            originalPrice: cleanRow[2] || '',
+            dealPrice: cleanRow[3] || '',
+            discount: cleanRow[4] || '',
+            imageUrl: cleanRow[5] || 'https://placehold.co/400x300/1e293b/white?text=No+Preview',
+            affiliateUrl: cleanRow[6],
+            status: cleanRow[7] || 'Active'
+          });
+        }
+      }
+      return rows;
+    }
+
+    async function fetchDeals() {
+      try {
+        const res = await fetch(SHEET_CSV_URL);
+        const text = await res.text();
+        allDeals = parseCSV(text);
+        renderCategories();
+        renderDeals(allDeals);
+      } catch (err) {
+        console.error("Error loading deals:", err);
+        document.getElementById('loader').innerHTML = '<p class="text-rose-400">Please make sure the Google Sheet is shared with "Anyone with the link can view".</p>';
+      } finally {
+        document.getElementById('loader').classList.add('hidden');
+        document.getElementById('dealsGrid').classList.remove('hidden');
+      }
+    }
+
+    function renderCategories() {
+      const categories = ['all', ...new Set(allDeals.map(d => d.category))];
+      const select = document.getElementById('categoryFilter');
+      select.innerHTML = categories.map(c => `<option value="${c}">${c === 'all' ? 'All Categories' : c}</option>`).join('');
+    }
+
+    function renderDeals(deals) {
+      const grid = document.getElementById('dealsGrid');
+      const noDeals = document.getElementById('noDeals');
+      grid.innerHTML = '';
+
+      const activeDeals = deals.filter(d => (d.status || '').toLowerCase().includes('active'));
+
+      if (!activeDeals.length) {
+        noDeals.classList.remove('hidden');
+        return;
+      }
+      noDeals.classList.add('hidden');
+
+      activeDeals.forEach(deal => {
+        grid.innerHTML += `
+          <div class="glass rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between group shadow-lg">
+            <div class="relative bg-gray-950/40 p-5 flex items-center justify-center min-h-[220px]">
+              <span class="absolute top-3 left-3 bg-rose-500 text-white font-black text-xs px-2.5 py-1 rounded-full badge-glow">
+                ${deal.discount || 'LIMITED DEAL'}
+              </span>
+              <span class="absolute top-3 right-3 text-[11px] font-medium bg-gray-800 text-gray-300 px-2.5 py-1 rounded-full border border-gray-700">
+                ${deal.category}
+              </span>
+              <img src="${deal.imageUrl}" alt="${deal.title}" class="max-h-44 w-auto object-contain group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/1e293b/white?text=Preview+Unavailable'">
+            </div>
+
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-bold text-gray-100 text-base leading-snug line-clamp-2 group-hover:text-amber-400 transition-colors">
+                  ${deal.title}
+                </h3>
+                <div class="flex items-baseline gap-2 mt-3">
+                  <span class="text-2xl font-black text-emerald-400">₹${deal.dealPrice}</span>
+                  ${deal.originalPrice ? `<span class="text-xs line-through text-gray-500">₹${deal.originalPrice}</span>` : ''}
+                </div>
+              </div>
+
+              <!-- Direct Affiliate Link with Tracking Shield -->
+              <a href="${deal.affiliateUrl}" target="_blank" rel="nofollow noopener sponsored"
+                 class="w-full py-3 px-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-gray-950 font-bold rounded-xl text-center text-sm shadow-md transition-all flex items-center justify-center gap-1.5">
+                <span>Grab Exclusive Deal</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    document.getElementById('searchInput').addEventListener('input', applyFilters);
+    document.getElementById('categoryFilter').addEventListener('change', applyFilters);
+
+    function applyFilters() {
+      const q = document.getElementById('searchInput').value.toLowerCase();
+      const cat = document.getElementById('categoryFilter').value;
+      const filtered = allDeals.filter(d => {
+        const matchesQuery = d.title.toLowerCase().includes(q) || d.category.toLowerCase().includes(q);
+        const matchesCat = cat === 'all' || d.category === cat;
+        return matchesQuery && matchesCat;
+      });
+      renderDeals(filtered);
+    }
+
+    fetchDeals();
+  </script>
+</body>
+</html>
