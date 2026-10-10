@@ -3,18 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <title>Prinzo Deals | Exclusive Activity Bundles & Mega Packs</title>
+  <title>Prinzo Deals India | Verified Loot Deals, Discounts & Price Drops</title>
   
-  <!-- Browser Tab Favicon (Official Prinzo Ribbon X) -->
+  <!-- Browser Tab Favicon (Prinzo Ribbon X) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='pFav2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%234FACFE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%2313132B'/%3E%3Cpath d='M22 26 C36 26 44 42 50 48 C56 42 64 26 78 26 C66 36 62 46 62 50 C62 54 66 64 78 74 C64 74 56 58 50 52 C44 58 36 74 22 74 C34 64 38 54 38 50 C38 46 34 36 22 26 Z' fill='none' stroke='url(%23pFav2)' stroke-width='7' stroke-linejoin='round'/%3E%3Cpath d='M28 29 L72 71' stroke='%2300F2FE' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
-
-  <!-- Gumroad Direct Overlay Integration Script -->
-  <script src="https://gumroad.com/js/gumroad.js"></script>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
     :root {
@@ -22,7 +19,7 @@
       --sab: env(safe-area-inset-bottom);
     }
     body { 
-      font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
       -webkit-tap-highlight-color: transparent;
       text-rendering: optimizeLegibility;
       overflow-x: hidden;
@@ -31,29 +28,35 @@
     h1, h2, h3, .brand-font { 
       font-family: 'Fredoka', cursive; 
     }
-    .touch-btn:active {
-      transform: scale(0.97);
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .touch-btn:active { transform: scale(0.97); }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
   </style>
 </head>
-<body class="bg-[#FFFDF9] text-gray-800 min-h-screen flex flex-col antialiased selection:bg-rose-200">
+<body class="bg-[#F8FAFC] text-slate-800 min-h-screen flex flex-col antialiased selection:bg-rose-100">
 
-  <!-- Flash Sale Top Bar -->
-  <aside aria-label="Announcement" class="bg-gradient-to-r from-rose-500 via-purple-600 to-indigo-600 text-white text-[11px] sm:text-xs md:text-sm font-bold py-2.5 px-3 text-center shadow-sm" style="padding-top: calc(0.5rem + var(--sat));">
-    ⚡ Prinzo Mega Bundles: Save Up to 65% on Full Curriculum Learning Packs!
+  <!-- Top Alert Notification Bar -->
+  <aside aria-label="Announcement" class="bg-gradient-to-r from-orange-500 via-rose-600 to-indigo-600 text-white text-[11px] sm:text-xs md:text-sm font-bold py-2.5 px-3 text-center shadow-sm" style="padding-top: calc(0.5rem + var(--sat));">
+    🇮🇳 India Loot Deals: Daily Handpicked Offers from Amazon, Flipkart, Myntra & Ajio!
   </aside>
 
-  <!-- Universal Responsive Navbar -->
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-purple-100 shadow-sm transition-all duration-200">
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-200">
     <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
       
-      <a href="kids.html" class="flex items-center gap-2 sm:gap-3.5 group select-none">
-        <!-- Prinzo Official Ribbon X Icon Badge -->
-        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#13132B] p-1.5 shadow-md border border-[#23234d] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
+      <a href="deals.html" class="flex items-center gap-2 sm:gap-3.5 group select-none">
+        <!-- Prinzo Badge Icon -->
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#13132B] p-1.5 shadow-md border border-[#23234d] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
           <svg viewBox="0 0 100 100" class="w-full h-full">
             <defs>
               <linearGradient id="dealLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#00F0FF" />
+                <stop offset="0%" stop-color="#00F2FE" />
                 <stop offset="50%" stop-color="#38B6FF" />
                 <stop offset="100%" stop-color="#5271FF" />
               </linearGradient>
@@ -68,152 +71,74 @@
         </div>
 
         <div class="flex items-center gap-1.5 sm:gap-2">
-          <span class="text-xl sm:text-2xl md:text-3xl font-black bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 bg-clip-text text-transparent brand-font tracking-wide">
-            Prinzo
+          <span class="text-xl sm:text-2xl md:text-3xl font-black bg-gradient-to-r from-orange-500 via-rose-600 to-indigo-600 bg-clip-text text-transparent brand-font tracking-wide">
+            Prinzo Deals
           </span>
-          <span class="inline-block text-[9px] sm:text-[10px] bg-rose-100 text-rose-700 font-extrabold px-1.5 py-0.5 sm:px-2 rounded-full uppercase tracking-wider">
-            Deals & Packs
+          <span class="inline-block text-[9px] sm:text-[10px] bg-rose-100 text-rose-700 font-extrabold px-1.5 py-0.5 rounded-full uppercase tracking-wider">
+            India
           </span>
         </div>
       </a>
 
-      <a href="kids.html" class="inline-flex items-center gap-1 sm:gap-1.5 text-xs sm:text-sm font-bold text-indigo-600 hover:text-indigo-800 bg-indigo-50 hover:bg-indigo-100 px-3.5 py-1.5 rounded-xl transition touch-btn">
-        <span>←</span>
-        <span>Back to Shop</span>
-      </a>
+      <!-- Search / Live Deals Status Tag -->
+      <div class="flex items-center gap-2">
+        <div class="text-[11px] sm:text-xs font-semibold text-slate-500 flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-full border border-slate-200">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          <span class="text-emerald-700 font-bold">Live Price Drops</span>
+        </div>
+      </div>
+
     </div>
   </nav>
 
   <!-- Hero Header -->
-  <header class="py-6 sm:py-12 md:py-14 px-4 max-w-4xl mx-auto text-center">
-    <span class="inline-block px-3 py-1 rounded-full bg-rose-100 text-rose-600 font-extrabold text-[10px] sm:text-xs uppercase tracking-widest mb-2.5 sm:mb-3">
-      Limited Time All-In-One Bundles
+  <header class="py-6 sm:py-10 md:py-12 px-4 max-w-4xl mx-auto text-center">
+    <span class="inline-block px-3 py-1 rounded-full bg-rose-100 text-rose-700 font-extrabold text-[10px] sm:text-xs uppercase tracking-widest mb-2.5">
+      🔥 Verified Associate & Loot Deals
     </span>
-    <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-      Curated Prinzo Bundles at <span class="text-rose-500">Mega Savings</span>
+    <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+      Biggest Discounts in India by <span class="text-rose-600">Prinzo</span>
     </h1>
-    <p class="mt-2 sm:mt-3.5 text-xs sm:text-base text-gray-600 max-w-2xl mx-auto font-medium px-2 leading-relaxed">
-      Complete high-resolution printable collections designed for homeschoolers, kindergarteners, and toddlers.
+    <p class="mt-2 text-xs sm:text-base text-slate-500 max-w-2xl mx-auto font-medium px-2 leading-relaxed">
+      Curated deals with maximum price cuts from Amazon, Flipkart, Myntra, Ajio, Boat, and top brands.
     </p>
+
+    <!-- Category Filter Bar (Smooth Swipe on Mobiles) -->
+    <div class="mt-6 flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar pb-2 px-1" id="categoryTabs">
+      <button onclick="filterCategory('all', this)" class="cat-btn active shrink-0 touch-btn bg-slate-900 text-white px-4 sm:px-5 py-2 rounded-full text-xs font-bold transition shadow-sm">All Deals</button>
+      <button onclick="filterCategory('Audio & Headphones', this)" class="cat-btn shrink-0 touch-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 px-4 sm:px-5 py-2 rounded-full text-xs font-bold transition">🎧 Audio & Earbuds</button>
+      <button onclick="filterCategory('Smartwatches & Wearables', this)" class="cat-btn shrink-0 touch-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 px-4 sm:px-5 py-2 rounded-full text-xs font-bold transition">⌚ Smartwatches</button>
+      <button onclick="filterCategory('Electronics & Mobiles', this)" class="cat-btn shrink-0 touch-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 px-4 sm:px-5 py-2 rounded-full text-xs font-bold transition">📱 Mobiles & Tech</button>
+      <button onclick="filterCategory('Fashion', this)" class="cat-btn shrink-0 touch-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 px-4 sm:px-5 py-2 rounded-full text-xs font-bold transition">👕 Fashion</button>
+      <button onclick="filterCategory('Home & Kitchen', this)" class="cat-btn shrink-0 touch-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 px-4 sm:px-5 py-2 rounded-full text-xs font-bold transition">🏠 Home & Kitchen</button>
+    </div>
   </header>
 
-  <!-- Responsive Deals Grid (1-Col Phone, 2-Col Tablet, 3-Col Desktop) -->
+  <!-- Main Deals Grid (1-Col Phone, 2-Col Tablet, 3-Col Desktop) -->
   <main class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 pb-14 sm:pb-20 flex-1 w-full">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
-      
-      <!-- Bundle 1: Animals Volume 1 -->
-      <article class="bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden relative group">
-        <div class="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 bg-rose-500 text-white font-extrabold text-[10px] sm:text-xs px-2.5 py-1 rounded-full shadow-md z-10">
-          SAVE 50%
-        </div>
-        <div class="bg-purple-50/60 p-4 sm:p-6 flex items-center justify-center min-h-[220px] sm:min-h-[260px]">
-          <img src="https://lh3.googleusercontent.com/d/1cLzcqNZsjRlOQzQJinScPkPoRR_XF-2E" 
-               alt="Prinzo Animals Coloring Book Volume 1" 
-               loading="lazy"
-               class="max-h-44 sm:max-h-56 w-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-300 shadow-sm"
-               referrerpolicy="no-referrer"
-               onerror="this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&auto=format&fit=crop&q=80'">
-        </div>
-        <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
-          <div>
-            <h2 class="font-bold text-gray-900 text-base sm:text-lg leading-snug group-hover:text-indigo-600 transition-colors">
-              Prinzo Animals Coloring Book (Volume 1)
-            </h2>
-            <p class="text-xs text-gray-500 mt-2 font-medium">Over 30+ pages of cheerful wildlife animals, jungle scenes, and bold lines for early learners.</p>
-            <div class="flex items-baseline gap-2 mt-3.5">
-              <span class="text-xl sm:text-2xl font-black text-rose-600">$4.99</span>
-              <span class="text-xs line-through text-gray-400">$6.77</span>
-              <span class="text-[10px] sm:text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md ml-auto">ALL-IN-ONE PDF</span>
-            </div>
-          </div>
-          <a href="#" 
-             class="w-full py-3 sm:py-3.5 px-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-rose-500 touch-btn hover:opacity-95 text-white font-bold rounded-xl sm:rounded-2xl text-center text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 select-none">
-            <span>Get Bundle Pack</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Bundle 2: Animals Volume 2 (Featured) -->
-      <article class="bg-white rounded-2xl sm:rounded-3xl border-2 border-indigo-300 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between overflow-hidden relative group ring-2 ring-indigo-400/20">
-        <div class="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 bg-gradient-to-r from-amber-500 to-rose-500 text-white font-extrabold text-[10px] sm:text-xs px-2.5 py-1 rounded-full shadow-md z-10">
-          BEST VALUE (65% OFF)
-        </div>
-        <div class="bg-indigo-50/60 p-4 sm:p-6 flex items-center justify-center min-h-[220px] sm:min-h-[260px]">
-          <img src="https://lh3.googleusercontent.com/d/1KVmVYjFQmfWsI6vfuu_NMCZQptznyRKP" 
-               alt="Prinzo Animals Coloring Book Volume 2" 
-               loading="lazy"
-               class="max-h-44 sm:max-h-56 w-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-300 shadow-sm"
-               referrerpolicy="no-referrer"
-               onerror="this.src='https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=600&auto=format&fit=crop&q=80'">
-        </div>
-        <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
-          <div>
-            <h2 class="font-bold text-gray-900 text-base sm:text-lg leading-snug group-hover:text-indigo-600 transition-colors">
-              Prinzo Animals Coloring Book (Volume 2)
-            </h2>
-            <p class="text-xs text-gray-500 mt-2 font-medium">Includes giraffes, elephants, tracing sheets, and creative habitat activity pages.</p>
-            <div class="flex items-baseline gap-2 mt-3.5">
-              <span class="text-xl sm:text-2xl font-black text-indigo-600">$4.99</span>
-              <span class="text-xs line-through text-gray-400">$6.77</span>
-              <span class="text-[10px] sm:text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md ml-auto">POPULAR PACK</span>
-            </div>
-          </div>
-          <a href="#" 
-             class="w-full py-3 sm:py-3.5 px-4 bg-gradient-to-r from-rose-500 via-purple-600 to-indigo-600 touch-btn hover:opacity-95 text-white font-bold rounded-xl sm:rounded-2xl text-center text-xs sm:text-sm shadow-lg transition-all flex items-center justify-center gap-2 select-none">
-            <span>Unlock Volume 2</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Bundle 3: Halloween Special Edition -->
-      <article class="bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden relative group">
-        <div class="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 bg-rose-500 text-white font-extrabold text-[10px] sm:text-xs px-2.5 py-1 rounded-full shadow-md z-10">
-          SEASON SPECIAL (45% OFF)
-        </div>
-        <div class="bg-pink-50/60 p-4 sm:p-6 flex items-center justify-center min-h-[220px] sm:min-h-[260px]">
-          <img src="https://lh3.googleusercontent.com/d/1s031OmcwDrmeRAuf_ZIrY9LpxVfcAkmv" 
-               alt="Prinzo Halloween Special Edition Book" 
-               loading="lazy"
-               class="max-h-44 sm:max-h-56 w-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-300 shadow-sm"
-               referrerpolicy="no-referrer"
-               onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&auto=format&fit=crop&q=80'">
-        </div>
-        <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
-          <div>
-            <h2 class="font-bold text-gray-900 text-base sm:text-lg leading-snug group-hover:text-indigo-600 transition-colors">
-              Prinzo Halloween Special Edition Pack
-            </h2>
-            <p class="text-xs text-gray-500 mt-2 font-medium">Jack-o'-lanterns, haunted castles, friendly ghosts, pumpkins & mazes.</p>
-            <div class="flex items-baseline gap-2 mt-3.5">
-              <span class="text-xl sm:text-2xl font-black text-rose-600">$5.99</span>
-              <span class="text-xs line-through text-gray-400">$9.99</span>
-              <span class="text-[10px] sm:text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md ml-auto">INSTANT PDF</span>
-            </div>
-          </div>
-          <a href="#" 
-             class="w-full py-3 sm:py-3.5 px-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 touch-btn hover:opacity-95 text-white font-bold rounded-xl sm:rounded-2xl text-center text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 select-none">
-            <span>Claim Discount</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-        </div>
-      </article>
-
+    <div id="loader" class="text-center py-12 sm:py-16">
+      <div class="inline-block w-8 h-8 sm:w-10 sm:h-10 border-4 border-rose-500 border-t-transparent rounded-full animate-spin"></div>
+      <p class="text-xs sm:text-sm text-slate-500 mt-3 font-semibold tracking-wide">Syncing latest Indian deals...</p>
     </div>
+
+    <!-- Responsive Grid -->
+    <div id="dealsGrid" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"></div>
+    <div id="emptyView" class="hidden text-center py-16 text-slate-400 font-semibold text-sm">No active deals found in this category right now.</div>
   </main>
 
-  <!-- Legal & Copyright Notice -->
-  <section class="max-w-4xl mx-auto px-4 mb-10 w-full">
-    <div class="bg-purple-50/70 border border-purple-100 rounded-2xl p-4 sm:p-5 text-center text-xs text-gray-600 space-y-1 shadow-sm">
-      <p class="font-bold text-gray-800 text-xs sm:text-sm">🔒 Prinzo Bundle Guarantee & Terms</p>
-      <p class="text-[11px] sm:text-xs">Instant high-resolution PDF downloads. Licensed strictly for <strong>Personal & Single-Classroom Use Only</strong>.</p>
-      <p class="text-[10px] sm:text-[11px] text-gray-400">Unauthorized reselling or uploading to public platforms is strictly prohibited.</p>
+  <!-- Legal Affiliate Notice -->
+  <section class="max-w-4xl mx-auto px-4 mb-8 w-full">
+    <div class="bg-slate-100/90 border border-slate-200 rounded-2xl p-4 text-center text-xs text-slate-500 space-y-1">
+      <p class="font-bold text-slate-700 text-xs">Affiliate Disclaimer</p>
+      <p class="text-[11px]">Prinzo Deals participates in various affiliate programs (including Extrape, EarnKaro, Amazon Associates). When you click and buy through our links, we may earn an affiliate commission at zero additional cost to you.</p>
     </div>
   </section>
 
-  <!-- Responsive Footer -->
-  <footer class="bg-white border-t border-purple-100 text-gray-500 text-xs py-7 sm:py-10 px-4 mt-auto">
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 text-slate-500 text-xs py-7 sm:py-10 px-4 mt-auto">
     <div class="max-w-7xl mx-auto text-center space-y-3">
       <div class="flex items-center justify-center gap-2">
         <div class="w-7 h-7 rounded-lg bg-[#13132B] p-1 flex items-center justify-center shadow-sm border border-[#23234d]">
@@ -226,21 +151,192 @@
             <path d="M28 29 L72 71" stroke="#38B6FF" stroke-width="4" stroke-linecap="round" />
           </svg>
         </div>
-        <p class="text-sm sm:text-base font-bold text-gray-900 brand-font">Prinzo Deals</p>
+        <p class="text-sm sm:text-base font-bold text-slate-900 brand-font">Prinzo Deals India</p>
       </div>
-      <p class="max-w-md mx-auto text-gray-400 text-[11px] sm:text-xs">
-        Official bundle and promotional outlet of Prinzo Global Inc.
+      <p class="max-w-md mx-auto text-slate-400 text-[11px] sm:text-xs">
+        Handpicked online shopping discounts, price drops, and associate offers for Indian shoppers.
       </p>
-      <div class="flex items-center justify-center gap-3 text-xs font-semibold text-gray-500 pt-1">
-        <a href="kids.html" class="hover:text-indigo-600 transition">Main Store Catalog</a>
-        <span>•</span>
-        <a href="deals.html" class="hover:text-indigo-600 transition">Exclusive Packs</a>
-      </div>
-      <p class="text-[10px] sm:text-[11px] text-gray-400 pt-3 border-t border-gray-100">
+      <p class="text-[10px] sm:text-[11px] text-slate-400 pt-3 border-t border-slate-100">
         © 2026 Prinzo Global Inc. All rights reserved.
       </p>
     </div>
   </footer>
 
+  <script>
+    // Live Google Sheet sync: Reads directly from 'Prinzo Deals' tab
+    const DEALS_CSV_URL = "https://docs.google.com/spreadsheets/d/1q6TyicNnqdnNHawsxvfnJavJe30oryrPShDfkRPXb6M/gviz/tq?tqx=out:csv&sheet=Prinzo%20Deals";
+
+    let allDeals = [];
+
+    // Helper to format Image links (Drive links or direct Web links)
+    function formatProductImage(raw) {
+      if (!raw || raw === 'image_link_here') {
+        return 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80';
+      }
+      raw = raw.trim();
+      const matchFile = raw.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+      if (matchFile && matchFile[1]) {
+        return `https://lh3.googleusercontent.com/d/${matchFile[1]}`;
+      }
+      const matchId = raw.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+      if (matchId && matchId[1]) {
+        return `https://lh3.googleusercontent.com/d/${matchId[1]}`;
+      }
+      if (raw.startsWith('http')) return raw;
+      return 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80';
+    }
+
+    function parseCSV(text) {
+      const lines = text.split(/\r?\n/).filter(r => r.trim().length > 0);
+      if (lines.length < 2) return [];
+
+      const rows = [];
+      for (let i = 1; i < lines.length; i++) {
+        let line = lines[i];
+        let values = [];
+        let insideQuote = false;
+        let entry = '';
+
+        for (let j = 0; j < line.length; j++) {
+          let char = line[j];
+          if (char === '"') {
+            insideQuote = !insideQuote;
+          } else if (char === ',' && !insideQuote) {
+            values.push(entry.trim());
+            entry = '';
+          } else {
+            entry += char;
+          }
+        }
+        values.push(entry.trim());
+
+        const cleanVal = val => (val || '').replace(/["₹,]/g, '').trim();
+
+        if (values.length >= 7) {
+          const title = values[0] || 'Exclusive Indian Offer';
+          const category = values[1] || 'General Deals';
+          const originalPrice = cleanVal(values[2]);
+          const dealPrice = cleanVal(values[3]) || '999';
+          const discountPct = cleanVal(values[4]) || '50';
+          const imgUrl = values[5] || '';
+          const affiliateUrl = values[6] || '#';
+          const status = values[7] || 'Active';
+
+          rows.push({
+            title: title,
+            category: category,
+            originalPrice: originalPrice,
+            dealPrice: dealPrice,
+            discountPct: discountPct,
+            imageUrl: formatProductImage(imgUrl),
+            affiliateUrl: affiliateUrl.trim(),
+            status: status
+          });
+        }
+      }
+      return rows;
+    }
+
+    async function loadDealsData() {
+      try {
+        const res = await fetch(DEALS_CSV_URL);
+        const text = await res.text();
+        allDeals = parseCSV(text);
+        renderDeals(allDeals);
+      } catch (err) {
+        console.error("Error loading deals:", err);
+        document.getElementById('loader').innerHTML = '<p class="text-rose-500 font-semibold text-xs">Could not sync deals. Please check sheet permissions.</p>';
+      } finally {
+        document.getElementById('loader').classList.add('hidden');
+        document.getElementById('dealsGrid').classList.remove('hidden');
+      }
+    }
+
+    function renderDeals(list) {
+      const grid = document.getElementById('dealsGrid');
+      const empty = document.getElementById('emptyView');
+      grid.innerHTML = '';
+
+      const activeList = list.filter(item => item.status.toLowerCase().includes('active'));
+
+      if (!activeList.length) {
+        empty.classList.remove('hidden');
+        return;
+      }
+      empty.classList.add('hidden');
+
+      activeList.forEach(item => {
+        const hasValidLink = item.affiliateUrl && item.affiliateUrl.startsWith('http');
+
+        grid.innerHTML += `
+          <article class="bg-white rounded-2xl sm:rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+            
+            <!-- Image & Tag Block -->
+            <div class="relative bg-slate-50 p-4 sm:p-6 flex items-center justify-center min-h-[220px] sm:min-h-[250px]">
+              <span class="absolute top-3 left-3 sm:top-4 sm:left-4 bg-rose-600 text-white font-extrabold text-[10px] sm:text-xs px-2.5 py-1 rounded-full shadow-sm z-10">
+                ${item.discountPct}% OFF
+              </span>
+              <span class="absolute top-3 right-3 sm:top-4 sm:right-4 bg-slate-200/90 text-slate-700 font-bold text-[9px] sm:text-[10px] px-2 py-0.5 rounded-md z-10">
+                ${item.category}
+              </span>
+              <img src="${item.imageUrl}" 
+                   alt="${item.title}" 
+                   loading="lazy"
+                   class="max-h-44 sm:max-h-52 w-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-300"
+                   referrerpolicy="no-referrer"
+                   onerror="this.src='https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80'">
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h2 class="font-bold text-slate-900 text-base sm:text-lg leading-snug group-hover:text-rose-600 transition-colors line-clamp-2">
+                  ${item.title}
+                </h2>
+                
+                <!-- INR Pricing Block -->
+                <div class="flex items-baseline gap-2 mt-3">
+                  <span class="text-xl sm:text-2xl font-black text-rose-600">₹${Number(item.dealPrice).toLocaleString('en-IN')}</span>
+                  ${item.originalPrice ? `<span class="text-xs line-through text-slate-400">₹${Number(item.originalPrice).toLocaleString('en-IN')}</span>` : ''}
+                  <span class="text-[10px] sm:text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md ml-auto">VERIFIED</span>
+                </div>
+              </div>
+
+              <!-- Extrape Associate Button -->
+              <a href="${hasValidLink ? item.affiliateUrl : 'javascript:void(0)'}" 
+                 ${hasValidLink ? 'target="_blank" rel="nofollow noopener sponsor"' : 'onclick="alert(\'Affiliate link will be updated soon!\')"' }
+                 class="w-full py-3 sm:py-3.5 px-4 bg-gradient-to-r from-orange-500 via-rose-600 to-indigo-600 touch-btn hover:opacity-95 text-white font-bold rounded-xl sm:rounded-2xl text-center text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 select-none">
+                <span>Grab Deal on Store</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+
+          </article>
+        `;
+      });
+    }
+
+    // Category Tabs Filter Logic
+    function filterCategory(cat, btn) {
+      document.querySelectorAll('.cat-btn').forEach(b => {
+        b.classList.remove('bg-slate-900', 'text-white');
+        b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+      });
+      if (btn) {
+        btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+        btn.classList.add('bg-slate-900', 'text-white');
+      }
+
+      if (cat === 'all') {
+        renderDeals(allDeals);
+      } else {
+        const filtered = allDeals.filter(p => p.category.toLowerCase().includes(cat.toLowerCase()));
+        renderDeals(filtered);
+      }
+    }
+
+    // Load initial data
+    loadDealsData();
+  </script>
 </body>
 </html>
