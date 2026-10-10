@@ -2,39 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Prinzo Deals | Exclusive Kids Bundles & Mega Packs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>Prinzo Deals | Exclusive Activity Bundles & Mega Packs</title>
   
-  <!-- Browser Tab Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='pIco2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%234FACFE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%2313132B'/%3E%3Cpath d='M22 26 C36 26 44 42 50 48 C56 42 64 26 78 26 C66 36 62 46 62 50 C62 54 66 64 78 74 C64 74 56 58 50 52 C44 58 36 74 22 74 C34 64 38 54 38 50 C38 46 34 36 22 26 Z' fill='none' stroke='url(%23pIco2)' stroke-width='7' stroke-linejoin='round'/%3E%3Cpath d='M28 29 L72 71' stroke='%2300F2FE' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <!-- Browser Tab Favicon (Official Prinzo Ribbon X) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='pFav2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F2FE'/%3E%3Cstop offset='100%25' stop-color='%234FACFE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%2313132B'/%3E%3Cpath d='M22 26 C36 26 44 42 50 48 C56 42 64 26 78 26 C66 36 62 46 62 50 C62 54 66 64 78 74 C64 74 56 58 50 52 C44 58 36 74 22 74 C34 64 38 54 38 50 C38 46 34 36 22 26 Z' fill='none' stroke='url(%23pFav2)' stroke-width='7' stroke-linejoin='round'/%3E%3Cpath d='M28 29 L72 71' stroke='%2300F2FE' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <!-- Gumroad Direct Overlay Integration Script -->
+  <script src="https://gumroad.com/js/gumroad.js"></script>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  
   <style>
-    body { font-family: 'Quicksand', sans-serif; -webkit-tap-highlight-color: transparent; }
-    h1, h2, h3, .brand-font { font-family: 'Fredoka', cursive; }
+    :root {
+      --sat: env(safe-area-inset-top);
+      --sab: env(safe-area-inset-bottom);
+    }
+    body { 
+      font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+      -webkit-tap-highlight-color: transparent;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+      padding-bottom: var(--sab);
+    }
+    h1, h2, h3, .brand-font { 
+      font-family: 'Fredoka', cursive; 
+    }
+    .touch-btn:active {
+      transform: scale(0.97);
+    }
   </style>
 </head>
 <body class="bg-[#FFFDF9] text-gray-800 min-h-screen flex flex-col antialiased selection:bg-rose-200">
 
-  <!-- Top Flash Sale Bar -->
-  <div class="bg-gradient-to-r from-rose-500 via-purple-600 to-indigo-600 text-white text-[11px] sm:text-xs md:text-sm font-bold py-2 px-3 text-center shadow-sm">
+  <!-- Flash Sale Top Bar -->
+  <aside aria-label="Announcement" class="bg-gradient-to-r from-rose-500 via-purple-600 to-indigo-600 text-white text-[11px] sm:text-xs md:text-sm font-bold py-2.5 px-3 text-center shadow-sm" style="padding-top: calc(0.5rem + var(--sat));">
     ⚡ Prinzo Mega Bundles: Save Up to 65% on Full Curriculum Learning Packs!
-  </div>
+  </aside>
 
-  <!-- Navbar -->
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-purple-100 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+  <!-- Universal Responsive Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-purple-100 shadow-sm transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
       
-      <a href="kids.html" class="flex items-center gap-2.5 sm:gap-3.5">
+      <a href="kids.html" class="flex items-center gap-2 sm:gap-3.5 group select-none">
         <!-- Prinzo Official Ribbon X Icon Badge -->
-        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#13132B] p-1.5 shadow-md border border-[#23234d] flex items-center justify-center shrink-0">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#13132B] p-1.5 shadow-md border border-[#23234d] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
           <svg viewBox="0 0 100 100" class="w-full h-full">
             <defs>
               <linearGradient id="dealLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#00F2FE" />
+                <stop offset="0%" stop-color="#00F0FF" />
                 <stop offset="50%" stop-color="#38B6FF" />
                 <stop offset="100%" stop-color="#5271FF" />
               </linearGradient>
@@ -48,119 +67,153 @@
           </svg>
         </div>
 
-        <div class="flex items-center gap-2">
-          <span class="text-xl sm:text-3xl font-black bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 bg-clip-text text-transparent brand-font tracking-wide">
+        <div class="flex items-center gap-1.5 sm:gap-2">
+          <span class="text-xl sm:text-2xl md:text-3xl font-black bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 bg-clip-text text-transparent brand-font tracking-wide">
             Prinzo
           </span>
-          <span class="inline-block text-[9px] sm:text-[10px] bg-rose-100 text-rose-700 font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
+          <span class="inline-block text-[9px] sm:text-[10px] bg-rose-100 text-rose-700 font-extrabold px-1.5 py-0.5 sm:px-2 rounded-full uppercase tracking-wider">
             Deals & Packs
           </span>
         </div>
       </a>
 
-      <a href="kids.html" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-indigo-600 hover:text-indigo-800 bg-indigo-50 px-3.5 py-1.5 rounded-xl transition">
-        ← Back to Shop
+      <a href="kids.html" class="inline-flex items-center gap-1 sm:gap-1.5 text-xs sm:text-sm font-bold text-indigo-600 hover:text-indigo-800 bg-indigo-50 hover:bg-indigo-100 px-3.5 py-1.5 rounded-xl transition touch-btn">
+        <span>←</span>
+        <span>Back to Shop</span>
       </a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="py-8 sm:py-12 px-4 max-w-4xl mx-auto text-center">
-    <span class="inline-block px-3.5 py-1 rounded-full bg-rose-100 text-rose-600 font-extrabold text-[11px] sm:text-xs uppercase tracking-widest mb-3">
-      Limited Time All-In-One Packs
+  <!-- Hero Header -->
+  <header class="py-6 sm:py-12 md:py-14 px-4 max-w-4xl mx-auto text-center">
+    <span class="inline-block px-3 py-1 rounded-full bg-rose-100 text-rose-600 font-extrabold text-[10px] sm:text-xs uppercase tracking-widest mb-2.5 sm:mb-3">
+      Limited Time All-In-One Bundles
     </span>
     <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
       Curated Prinzo Bundles at <span class="text-rose-500">Mega Savings</span>
     </h1>
-    <p class="mt-2.5 sm:mt-3 text-xs sm:text-base text-gray-600 max-w-2xl mx-auto font-medium px-2 leading-relaxed">
+    <p class="mt-2 sm:mt-3.5 text-xs sm:text-base text-gray-600 max-w-2xl mx-auto font-medium px-2 leading-relaxed">
       Complete high-resolution printable collections designed for homeschoolers, kindergarteners, and toddlers.
     </p>
   </header>
 
-  <!-- Responsive Deals Grid (1 Col Mobile, 2 Col Tablet, 3 Col Desktop) -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24 flex-1 w-full">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+  <!-- Responsive Deals Grid (1-Col Phone, 2-Col Tablet, 3-Col Desktop) -->
+  <main class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 pb-14 sm:pb-20 flex-1 w-full">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
       
-      <!-- Bundle 1 -->
-      <div class="bg-white rounded-3xl border-2 border-purple-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden relative group">
-        <div class="absolute top-4 right-4 bg-rose-500 text-white font-extrabold text-[10px] sm:text-xs px-3 py-1 rounded-full shadow-md z-10">
+      <!-- Bundle 1: Animals Volume 1 -->
+      <article class="bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden relative group">
+        <div class="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 bg-rose-500 text-white font-extrabold text-[10px] sm:text-xs px-2.5 py-1 rounded-full shadow-md z-10">
           SAVE 50%
         </div>
-        <div class="bg-purple-50/60 p-6 flex items-center justify-center">
-          <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&auto=format&fit=crop&q=80" alt="Toddler Starter Bundle" class="h-44 sm:h-52 object-contain rounded-2xl group-hover:scale-105 transition-transform duration-300">
+        <div class="bg-purple-50/60 p-4 sm:p-6 flex items-center justify-center min-h-[220px] sm:min-h-[260px]">
+          <img src="https://lh3.googleusercontent.com/d/1cLzcqNZsjRlOQzQJinScPkPoRR_XF-2E" 
+               alt="Prinzo Animals Coloring Book Volume 1" 
+               loading="lazy"
+               class="max-h-44 sm:max-h-56 w-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-300 shadow-sm"
+               referrerpolicy="no-referrer"
+               onerror="this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&auto=format&fit=crop&q=80'">
         </div>
-        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+        <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
           <div>
-            <h3 class="font-bold text-gray-900 text-lg leading-snug">The Ultimate Toddler Starter Pack (Ages 1-3)</h3>
-            <p class="text-xs text-gray-500 mt-2 font-medium">Over 120+ pages of big shapes, alphabet tracing & cute coloring fun.</p>
-            <div class="flex items-baseline gap-2 mt-4">
-              <span class="text-2xl font-black text-rose-600">$4.99</span>
-              <span class="text-xs line-through text-gray-400">$9.99</span>
-              <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md ml-auto">ALL-IN-ONE PDF</span>
+            <h2 class="font-bold text-gray-900 text-base sm:text-lg leading-snug group-hover:text-indigo-600 transition-colors">
+              Prinzo Animals Coloring Book (Volume 1)
+            </h2>
+            <p class="text-xs text-gray-500 mt-2 font-medium">Over 30+ pages of cheerful wildlife animals, jungle scenes, and bold lines for early learners.</p>
+            <div class="flex items-baseline gap-2 mt-3.5">
+              <span class="text-xl sm:text-2xl font-black text-rose-600">$4.99</span>
+              <span class="text-xs line-through text-gray-400">$6.77</span>
+              <span class="text-[10px] sm:text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md ml-auto">ALL-IN-ONE PDF</span>
             </div>
           </div>
-          <a href="#" class="w-full py-3.5 px-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-rose-500 active:scale-[0.98] hover:opacity-95 text-white font-bold rounded-2xl text-center text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2">
+          <a href="#" 
+             class="w-full py-3 sm:py-3.5 px-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-rose-500 touch-btn hover:opacity-95 text-white font-bold rounded-xl sm:rounded-2xl text-center text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 select-none">
             <span>Get Bundle Pack</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
         </div>
-      </div>
+      </article>
 
-      <!-- Bundle 2 (Featured) -->
-      <div class="bg-white rounded-3xl border-2 border-indigo-300 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between overflow-hidden relative group ring-2 ring-indigo-400/20">
-        <div class="absolute top-4 right-4 bg-gradient-to-r from-amber-500 to-rose-500 text-white font-extrabold text-[10px] sm:text-xs px-3 py-1 rounded-full shadow-md z-10">
+      <!-- Bundle 2: Animals Volume 2 (Featured) -->
+      <article class="bg-white rounded-2xl sm:rounded-3xl border-2 border-indigo-300 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between overflow-hidden relative group ring-2 ring-indigo-400/20">
+        <div class="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 bg-gradient-to-r from-amber-500 to-rose-500 text-white font-extrabold text-[10px] sm:text-xs px-2.5 py-1 rounded-full shadow-md z-10">
           BEST VALUE (65% OFF)
         </div>
-        <div class="bg-indigo-50/60 p-6 flex items-center justify-center">
-          <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=600&auto=format&fit=crop&q=80" alt="Kindergarten Master Suite" class="h-44 sm:h-52 object-contain rounded-2xl group-hover:scale-105 transition-transform duration-300">
+        <div class="bg-indigo-50/60 p-4 sm:p-6 flex items-center justify-center min-h-[220px] sm:min-h-[260px]">
+          <img src="https://lh3.googleusercontent.com/d/1KVmVYjFQmfWsI6vfuu_NMCZQptznyRKP" 
+               alt="Prinzo Animals Coloring Book Volume 2" 
+               loading="lazy"
+               class="max-h-44 sm:max-h-56 w-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-300 shadow-sm"
+               referrerpolicy="no-referrer"
+               onerror="this.src='https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=600&auto=format&fit=crop&q=80'">
         </div>
-        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+        <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
           <div>
-            <h3 class="font-bold text-gray-900 text-lg leading-snug">Kindergarten Master Learning Suite (Ages 4-8)</h3>
-            <p class="text-xs text-gray-500 mt-2 font-medium">Math basics, phonics, mazes, handwriting workbooks & holiday sets.</p>
-            <div class="flex items-baseline gap-2 mt-4">
-              <span class="text-2xl font-black text-indigo-600">$7.99</span>
-              <span class="text-xs line-through text-gray-400">$24.99</span>
-              <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md ml-auto">MEGA 250+ PAGES</span>
+            <h2 class="font-bold text-gray-900 text-base sm:text-lg leading-snug group-hover:text-indigo-600 transition-colors">
+              Prinzo Animals Coloring Book (Volume 2)
+            </h2>
+            <p class="text-xs text-gray-500 mt-2 font-medium">Includes giraffes, elephants, tracing sheets, and creative habitat activity pages.</p>
+            <div class="flex items-baseline gap-2 mt-3.5">
+              <span class="text-xl sm:text-2xl font-black text-indigo-600">$4.99</span>
+              <span class="text-xs line-through text-gray-400">$6.77</span>
+              <span class="text-[10px] sm:text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md ml-auto">POPULAR PACK</span>
             </div>
           </div>
-          <a href="#" class="w-full py-3.5 px-4 bg-gradient-to-r from-rose-500 via-purple-600 to-indigo-600 active:scale-[0.98] hover:opacity-95 text-white font-bold rounded-2xl text-center text-xs sm:text-sm shadow-lg transition-all flex items-center justify-center gap-2">
-            <span>Unlock Mega Suite</span>
+          <a href="#" 
+             class="w-full py-3 sm:py-3.5 px-4 bg-gradient-to-r from-rose-500 via-purple-600 to-indigo-600 touch-btn hover:opacity-95 text-white font-bold rounded-xl sm:rounded-2xl text-center text-xs sm:text-sm shadow-lg transition-all flex items-center justify-center gap-2 select-none">
+            <span>Unlock Volume 2</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
         </div>
-      </div>
+      </article>
 
-      <!-- Bundle 3 -->
-      <div class="bg-white rounded-3xl border-2 border-purple-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden relative group">
-        <div class="absolute top-4 right-4 bg-rose-500 text-white font-extrabold text-[10px] sm:text-xs px-3 py-1 rounded-full shadow-md z-10">
-          SAVE 45%
+      <!-- Bundle 3: Halloween Special Edition -->
+      <article class="bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden relative group">
+        <div class="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 bg-rose-500 text-white font-extrabold text-[10px] sm:text-xs px-2.5 py-1 rounded-full shadow-md z-10">
+          SEASON SPECIAL (45% OFF)
         </div>
-        <div class="bg-pink-50/60 p-6 flex items-center justify-center">
-          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&auto=format&fit=crop&q=80" alt="Halloween Special Pack" class="h-44 sm:h-52 object-contain rounded-2xl group-hover:scale-105 transition-transform duration-300">
+        <div class="bg-pink-50/60 p-4 sm:p-6 flex items-center justify-center min-h-[220px] sm:min-h-[260px]">
+          <img src="https://lh3.googleusercontent.com/d/1s031OmcwDrmeRAuf_ZIrY9LpxVfcAkmv" 
+               alt="Prinzo Halloween Special Edition Book" 
+               loading="lazy"
+               class="max-h-44 sm:max-h-56 w-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-300 shadow-sm"
+               referrerpolicy="no-referrer"
+               onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&auto=format&fit=crop&q=80'">
         </div>
-        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+        <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
           <div>
-            <h3 class="font-bold text-gray-900 text-lg leading-snug">Spooky Halloween & Holiday Edition Pack</h3>
-            <p class="text-xs text-gray-500 mt-2 font-medium">Jack-o'-lanterns, haunted castles, pumpkin mazes & coloring pages.</p>
-            <div class="flex items-baseline gap-2 mt-4">
-              <span class="text-2xl font-black text-rose-600">$3.99</span>
-              <span class="text-xs line-through text-gray-400">$7.99</span>
-              <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md ml-auto">SEASONAL PASS</span>
+            <h2 class="font-bold text-gray-900 text-base sm:text-lg leading-snug group-hover:text-indigo-600 transition-colors">
+              Prinzo Halloween Special Edition Pack
+            </h2>
+            <p class="text-xs text-gray-500 mt-2 font-medium">Jack-o'-lanterns, haunted castles, friendly ghosts, pumpkins & mazes.</p>
+            <div class="flex items-baseline gap-2 mt-3.5">
+              <span class="text-xl sm:text-2xl font-black text-rose-600">$5.99</span>
+              <span class="text-xs line-through text-gray-400">$9.99</span>
+              <span class="text-[10px] sm:text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md ml-auto">INSTANT PDF</span>
             </div>
           </div>
-          <a href="#" class="w-full py-3.5 px-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 active:scale-[0.98] hover:opacity-95 text-white font-bold rounded-2xl text-center text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2">
+          <a href="#" 
+             class="w-full py-3 sm:py-3.5 px-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 touch-btn hover:opacity-95 text-white font-bold rounded-xl sm:rounded-2xl text-center text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 select-none">
             <span>Claim Discount</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
         </div>
-      </div>
+      </article>
 
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-white border-t border-purple-100 text-gray-500 text-xs py-8 sm:py-10 px-4 mt-auto">
+  <!-- Legal & Copyright Notice -->
+  <section class="max-w-4xl mx-auto px-4 mb-10 w-full">
+    <div class="bg-purple-50/70 border border-purple-100 rounded-2xl p-4 sm:p-5 text-center text-xs text-gray-600 space-y-1 shadow-sm">
+      <p class="font-bold text-gray-800 text-xs sm:text-sm">🔒 Prinzo Bundle Guarantee & Terms</p>
+      <p class="text-[11px] sm:text-xs">Instant high-resolution PDF downloads. Licensed strictly for <strong>Personal & Single-Classroom Use Only</strong>.</p>
+      <p class="text-[10px] sm:text-[11px] text-gray-400">Unauthorized reselling or uploading to public platforms is strictly prohibited.</p>
+    </div>
+  </section>
+
+  <!-- Responsive Footer -->
+  <footer class="bg-white border-t border-purple-100 text-gray-500 text-xs py-7 sm:py-10 px-4 mt-auto">
     <div class="max-w-7xl mx-auto text-center space-y-3">
       <div class="flex items-center justify-center gap-2">
         <div class="w-7 h-7 rounded-lg bg-[#13132B] p-1 flex items-center justify-center shadow-sm border border-[#23234d]">
@@ -176,8 +229,13 @@
         <p class="text-sm sm:text-base font-bold text-gray-900 brand-font">Prinzo Deals</p>
       </div>
       <p class="max-w-md mx-auto text-gray-400 text-[11px] sm:text-xs">
-        Official bundle deals from Prinzo Global Inc.
+        Official bundle and promotional outlet of Prinzo Global Inc.
       </p>
+      <div class="flex items-center justify-center gap-3 text-xs font-semibold text-gray-500 pt-1">
+        <a href="kids.html" class="hover:text-indigo-600 transition">Main Store Catalog</a>
+        <span>•</span>
+        <a href="deals.html" class="hover:text-indigo-600 transition">Exclusive Packs</a>
+      </div>
       <p class="text-[10px] sm:text-[11px] text-gray-400 pt-3 border-t border-gray-100">
         © 2026 Prinzo Global Inc. All rights reserved.
       </p>
